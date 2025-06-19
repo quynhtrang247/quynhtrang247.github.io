@@ -1,5 +1,5 @@
-# Thu Trang Nguyen - Portfolio
+# Trang Dang Vu Quynh - Portfolio
 
-Welcome to my space! 🚀
+Welcome to my space! 
 
-Explore my portfolio: [thutrang147.github.io](https://thutrang147.github.io)
+Explore my portfolio: [quynhtrang247.github.io](https://quynhtrang247.github.io)
