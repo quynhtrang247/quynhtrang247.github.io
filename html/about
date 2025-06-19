@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quynh Trang - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header with name on left, navigation on right -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="../index.html">Quynh Trang</a>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="../images/cv.pdf" target="_blank">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2>About</h2>
+                <div class="about-content">
+                    <img src="../images/profile - photo.jpg" alt="Trang Dang Vu Quynh" class="about-photo">
+                    <div class="about-text">
+                        <p>Hi, I'm Quynh Trang — a <strong>Banking and International Finance student</strong> at <strong>Foreign Trade University</strong>, passionate about the intersection of data, finance, and technology.</p>
+
+                        <p>With growing experience in <strong>Excel, Python, and SQL</strong>, I'm building a strong foundation in <strong>data analysis</strong> and <strong>business problem-solving</strong>. I'm particularly interested in how data can optimize operations and enhance decision-making in sectors like banking, e-commerce, and education.</p>
+
+                        <p>I embrace challenges with <strong>curiosity and adaptability</strong>, always eager to learn and contribute through meaningful, data-driven insights. Let’s connect and explore how data can make a difference!</p>
+
+                        
+                        <ul class="personal-info">
+                            <li><i class="fas fa-birthday-cake"></i> Birthday: 24 July 2005</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Address: Ha Noi, Vietnam</li>
+                            <li><i class="fas fa-envelope"></i> Email: trangdangvuquynh240705@gmail.com</li>
+                            <li><i class="fas fa-phone"></i> Phone: 0374683896</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Interests</h3>
+                <div class="interests-grid">
+                    <div class="interest-item">Data Analytics</div>
+                    <div class="interest-item">Business Intelligence</div>
+                    <div class="interest-item">Machine Learning</div>
+                    <div class="interest-item">Financial Analysis</div>
+                    <div class="interest-item">Data Visualization</div>
+                    <div class="interest-item">Statistical Modeling</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
