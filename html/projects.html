@@ -30,30 +30,178 @@
     </header>
 
     <!-- Projects content -->
-    <main>
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Projects</h2>
-                
-                <div class="projects-grid">                   
-                    <!-- Project 2 -->
-                    <div class="project-card" data-project="project2">
-                        <div class="project-image-container">
-                            <img src="../images/project2.png" alt="Vietnam F&B Industry Analysis">
-                            <div class="info-overlay">
-                                <button class="info-button" onclick="openProjectModal('project2')">
-                                    <i class="fas fa-info-circle"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="project-title">
-                            <h3>Vietnam F&B Industry Analysis</h3>
+<!-- Projects content -->
+<main>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card" data-project="project1">
+                    <div class="project-image-container">
+                        <img src="../images/project-cg.png" alt="Corporate Governance and Firm Profitability">
+                        <div class="info-overlay">
+                            <button class="info-button" onclick="openProjectModal('project1')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
                         </div>
                     </div>
+                    <div class="project-title">
+                        <h3>Corporate Governance and Firm Profitability</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-project="project2">
+                    <div class="project-image-container">
+                        <img src="../images/project-vn30.png" alt="News Sentiment and VN30 Stock Returns">
+                        <div class="info-overlay">
+                            <button class="info-button" onclick="openProjectModal('project2')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>News Sentiment and VN30 Stock Returns</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-project="project3">
+                    <div class="project-image-container">
+                        <img src="../images/project2.png" alt="Vietnam F&B Industry Analysis">
+                        <div class="info-overlay">
+                            <button class="info-button" onclick="openProjectModal('project3')">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-title">
+                        <h3>Vietnam F&B Industry Analysis</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Project Modals -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+
+        <!-- Project 1 Details -->
+        <div id="project1Details" class="project-details">
+            <h2>Relationship between Corporate Governance and Firm Profitability</h2>
+
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h3>Tools</h3>
+                    <p>Stata, Excel, Panel Data Econometrics</p>
+                </div>
+
+                <div class="meta-section">
+                    <h3>Project Links</h3>
+                    <p>
+                        <a href="YOUR_GITHUB_LINK_FOR_STATA_PROJECT" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="YOUR_DRIVE_OR_PDF_LINK_FOR_REPORT" target="_blank" class="btn">
+                            <i class="fas fa-file-pdf"></i> Report
+                        </a>
+                    </p>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <div class="project-description">
+                <h3>Overview</h3>
+                <p>Team Research Project | HNX-listed firms | 2010 - 2024</p>
+
+                <h3>Details</h3>
+                <ul>
+                    <li>Conducted quantitative panel-data analysis to examine how corporate governance mechanisms affect firm profitability.</li>
+                    <li>Cleaned and structured panel data in Stata, including type conversion, variable construction, log transformation, and winsorization.</li>
+                    <li>Applied model diagnostics including VIF, Hausman, heteroskedasticity, autocorrelation, and time fixed-effects tests.</li>
+                    <li>Estimated Fixed Effects regressions with clustered robust standard errors and interpreted empirical results for the final report.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Project 2 Details -->
+        <div id="project2Details" class="project-details">
+            <h2>Impact of News Sentiment on Stock Returns: Evidence from VN30</h2>
+
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h3>Tools</h3>
+                    <p>Python, Jupyter Notebook, Panel Data Analysis, Web Scraping</p>
+                </div>
+
+                <div class="meta-section">
+                    <h3>Project Links</h3>
+                    <p>
+                        <a href="YOUR_GITHUB_LINK_FOR_PYTHON_PROJECT" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="YOUR_DRIVE_OR_PDF_LINK_FOR_REPORT_OR_SLIDES" target="_blank" class="btn">
+                            <i class="fas fa-file-pdf"></i> Report
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h3>Overview</h3>
+                <p>Team Research Project | VN30 Index | Jan 2023 - Jun 2024</p>
+
+                <h3>Details</h3>
+                <ul>
+                    <li>Developed a Python workflow in Jupyter Notebook to collect financial news, retrieve VN30 market data, and construct a panel dataset for analysis.</li>
+                    <li>Processed and merged firm-level sentiment, macro news, stock prices, and trading volume data for econometric modeling.</li>
+                    <li>Applied sentiment scoring and estimated Pooled OLS, Fixed Effects, and Random Effects models with diagnostic tests.</li>
+                    <li>Visualized and interpreted the results, finding a positive and statistically significant relationship between firm-specific sentiment and short-term stock returns.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Project 3 Details -->
+        <div id="project3Details" class="project-details">
+            <h2>Vietnam F&B Industry Performance & Growth Analysis</h2>
+
+            <div class="project-meta">
+                <div class="meta-section">
+                    <h3>Tools</h3>
+                    <p>Python, Excel, Power BI, Tableau</p>
+                </div>
+
+                <div class="meta-section">
+                    <h3>Project Links</h3>
+                    <p>
+                        <a href="https://drive.google.com/file/d/1qBSH3jOOI8lp3SqJmLmD78C7ta-fWyAj/view?usp=sharing" target="_blank" class="btn">
+                            <i class="fas fa-file-pdf"></i> Preview
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h3>Overview</h3>
+                <p>G'Contest | Team of 3 members | May 2025</p>
+
+                <h3>Details</h3>
+                <ul>
+                    <li>Analyzed the performance and growth potential of Vietnam's F&B industry (2019-2023).</li>
+                    <li>Segmented over 1,000 businesses into “High Potential” and “Needs Support” based on CAGR, profitability, and cash flow.</li>
+                    <li>Visualized key financial trends pre- and post-COVID with Tableau dashboards.</li>
+                    <li>Delivered strategic recommendations for growth and operational optimization.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Project Modals -->
     <div id="projectModal" class="modal">
