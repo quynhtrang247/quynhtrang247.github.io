@@ -10,6 +10,16 @@
   --border-radius: 12px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
+
+  /* --- New: soft purple accent palette --- */
+  --accent-purple: #a78bfa;
+  --accent-purple-dark: #8b6ef2;
+  --accent-purple-soft: #efeafe;
+  --shadow-purple: 0 10px 28px rgba(167, 139, 250, 0.18);
+
+  /* fixes for two variables referenced later in the file but never defined */
+  --white: #ffffff;
+  --primary-dark: var(--accent-purple-dark);
 }
 
 * {
@@ -58,7 +68,7 @@ h2:after {
   left: 0;
   width: 40px;
   height: 3px;
-  background-color: var(--primary);
+  background-color: var(--accent-purple);
   border-radius: 3px;
 }
 
@@ -115,12 +125,13 @@ ul {
 }
 
 .site-nav a:hover {
-  background-color: var(--secondary);
+  background-color: var(--accent-purple-soft);
+  color: var(--accent-purple-dark);
 }
 
 /* Active link styles */
 .site-nav a.active {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
   color: white;
 }
 
@@ -141,6 +152,37 @@ main {
 .home-page {
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+
+/* Soft, blurred color blobs behind the hero content -
+   subtle enough to stay minimalist, but breaks up the flat white page */
+.home-page::before,
+.home-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-page::before {
+  width: 320px;
+  height: 320px;
+  background: var(--accent-purple);
+  opacity: 0.18;
+  top: 8%;
+  left: 6%;
+}
+
+.home-page::after {
+  width: 280px;
+  height: 280px;
+  background: var(--accent-purple-dark);
+  opacity: 0.14;
+  bottom: 8%;
+  right: 8%;
 }
 
 .home-page main {
@@ -150,6 +192,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .home-content {
@@ -167,7 +211,16 @@ main {
 .home-subtitle {
   font-size: 1.5rem;
   margin-bottom: 40px;
-  color: var(--accent);
+  color: var(--accent-purple-dark);
+  font-weight: 300;
+}
+
+/* Actual class used in index.html for the role/title under the name */
+.role-tag {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: var(--accent-purple-dark);
   font-weight: 300;
 }
 
@@ -190,11 +243,11 @@ main {
 }
 
 .home-navigation a:hover {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
   color: white;
-  border-color: var(--primary);
+  border-color: var(--accent-purple);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-purple);
 }
 
 /* Social links */
@@ -209,7 +262,7 @@ main {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--secondary);
+  background-color: var(--accent-purple-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +271,8 @@ main {
 
 .social-links a:hover {
   transform: translateY(-3px);
-  background-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
+  box-shadow: var(--shadow-purple);
 }
 
 .social-links img {
@@ -269,7 +323,7 @@ main {
 
 .personal-info i {
   width: 30px;
-  color: var(--primary);
+  color: var(--accent-purple-dark);
 }
 
 .interests-grid {
@@ -288,7 +342,7 @@ main {
 }
 
 .interest-item:hover {
-  background-color: var(--primary);
+  background-color: var(--accent-purple);
   color: white;
   transform: translateY(-3px);
 }
@@ -325,7 +379,7 @@ main {
 
 .school-year {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-purple-dark);
   margin-bottom: 10px;
   display: block;
 }
@@ -345,13 +399,19 @@ main {
   padding: 25px;
   border-radius: var(--border-radius);
   position: relative;
+  border-left: 3px solid transparent;
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  border-left: 3px solid var(--accent-purple);
 }
 
 .timeline-date {
   display: block;
   margin-bottom: 5px;
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-purple-dark);
   font-style: italic;
 }
 
@@ -379,12 +439,13 @@ main {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-purple);
 }
 
 .project-image-container {
@@ -415,7 +476,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(167, 139, 250, 0.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -437,7 +498,7 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    color: var(--primary);
+    color: var(--accent-purple-dark);
     cursor: pointer;
     transform: scale(0.8);
     opacity: 0.9;
@@ -496,7 +557,7 @@ main {
     right: 20px;
     font-size: 28px;
     cursor: pointer;
-    color: var(--primary);
+    color: var(--accent-purple-dark);
     transition: all 0.2s ease;
 }
 
@@ -560,12 +621,13 @@ main {
     background-color: var(--bg-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .skill-logo-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-purple);
 }
 
 .skill-logo-item img {
@@ -604,11 +666,12 @@ main {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-category-box:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-purple);
 }
 
 .skill-category-box h3 {
@@ -648,11 +711,11 @@ main {
 
 .contact-box {
     background-color: var(--white);
-    border: 2px solid var(--primary);
+    border: 2px solid var(--secondary);
     border-radius: var(--border-radius);
     padding: 30px 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -663,14 +726,14 @@ main {
 
 .contact-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(255, 202, 40, 0.15);
+    box-shadow: var(--shadow-purple);
     border-color: var(--primary-dark);
 }
 
 .contact-icon {
     width: 70px;
     height: 70px;
-    background-color: #4A4A4A; /* Dark gray background */
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -680,7 +743,7 @@ main {
 
 .contact-icon i {
     font-size: 28px;
-    color: #FFFFFF; /* White icons on dark background */
+    color: #FFFFFF; /* White icons on purple background */
 }
 
 .contact-box h3 {
@@ -714,7 +777,7 @@ main {
 .social-icon {
     width: 45px;
     height: 45px;
-    background-color: #4A4A4A; /* Dark gray background */
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-purple-dark));
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -723,7 +786,7 @@ main {
 
 .social-icon i {
     font-size: 20px;
-    color: #FFFFFF; /* White icons on dark background */
+    color: #FFFFFF; /* White icons on purple background */
 }
 
 /* Add to your style.css */
