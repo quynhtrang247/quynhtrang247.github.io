@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Sale - Edit User Feature Analysis | Quynh Trang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Extra styles scoped to this case-study page only */
+        .case-hero {
+            padding-bottom: 10px;
+        }
+        .case-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--accent-purple-dark);
+            margin-bottom: 20px;
+        }
+        .case-back-link:hover {
+            text-decoration: underline;
+        }
+        .case-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0 5px;
+        }
+        .case-tag {
+            padding: 6px 14px;
+            background-color: var(--accent-purple-soft);
+            color: var(--accent-purple-dark);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .case-subtitle {
+            color: var(--accent);
+            font-size: 1.05rem;
+            margin-top: 8px;
+        }
+        .case-section h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+        .case-section h3:first-child {
+            margin-top: 0;
+        }
+        .case-img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        .case-img-wide {
+            width: 100%;
+            max-width: 950px;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            background: white;
+            padding: 10px;
+        }
+        .case-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+        .screen-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+        .screen-item img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: block;
+        }
+        .screen-item p {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--accent-purple-dark);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        @media (max-width: 600px) {
+            .screen-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+        .table-scroll {
+            overflow-x: auto;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        table.case-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 640px;
+        }
+        table.case-table.wide-table {
+            min-width: 980px;
+        }
+        table.case-table th {
+            background-color: var(--secondary);
+            text-align: left;
+            padding: 10px 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        table.case-table td {
+            padding: 10px 12px;
+            border-top: 1px solid var(--secondary);
+            vertical-align: top;
+        }
+        table.case-table td:last-child {
+            min-width: 220px;
+        }
+        table.case-table tr.group-row td {
+            background-color: var(--accent-purple-soft);
+            font-weight: 600;
+            color: var(--accent-purple-dark);
+        }
+        .case-note {
+            background-color: var(--secondary);
+            border-left: 3px solid var(--accent-purple);
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.92rem;
+        }
+        .case-divider {
+            border: none;
+            border-top: 1px solid var(--secondary);
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Header with name on left, navigation on right -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="../index.html">Quynh Trang</a>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="../images/cv.pdf" target="_blank">CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section case-hero">
+            <div class="container">
+                <a href="projects.html" class="case-back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                <h2>Mobile Sale — Edit User Feature Analysis</h2>
+                <p class="case-subtitle">Business Analyst Trainee · SmartSotek Academy · Module: User Management</p>
+                <div class="case-meta-row">
+                    <span class="case-tag">Visio</span>
+                    <span class="case-tag">BPMN</span>
+                    <span class="case-tag">Figma</span>
+                    <span class="case-tag">Postman</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-section">
+            <div class="container">
+                <h3>Overview</h3>
+                <p>Sales-support mobile app for financial company loan officers. As a BA Trainee, I analyzed the <strong>Edit User</strong> feature end-to-end: screen flow, field-level specification, business process (BPMN), and the supporting API — from the initial user action all the way to FE/BE logic and the database.</p>
+
+                <hr class="case-divider">
+
+                <h3>1. Screen Flow</h3>
+                <p>6 screens covering the main edit flow plus every validation/error state: success, missing required field, duplicate data, and invalid format.</p>
+                <div class="screen-gallery">
+                    <div class="screen-item">
+                        <img src="../images/screen1.png" alt="Màn hình 1 - Danh sách tài khoản">
+                        <p>Màn hình 1 — Danh sách tài khoản</p>
+                    </div>
+                    <div class="screen-item">
+                        <img src="../images/screen2.png" alt="Màn hình 2 - Chỉnh sửa tài khoản">
+                        <p>Màn hình 2 — Chỉnh sửa tài khoản</p>
+                    </div>
+                    <div class="screen-item">
+                        <img src="../images/screen3.png" alt="Màn hình 3 - Thông báo thành công">
+                        <p>Màn hình 3 — Thông báo thành công</p>
+                    </div>
+                    <div class="screen-item">
+                        <img src="../images/screen4.png" alt="Màn hình 4 - Lỗi bắt buộc nhập">
+                        <p>Màn hình 4 — Lỗi bắt buộc nhập</p>
+                    </div>
+                    <div class="screen-item">
+                        <img src="../images/screen5.png" alt="Màn hình 5 - Lỗi thông tin trùng">
+                        <p>Màn hình 5 — Lỗi thông tin trùng</p>
+                    </div>
+                    <div class="screen-item">
+                        <img src="../images/screen6.png" alt="Màn hình 6 - Lỗi sai định dạng">
+                        <p>Màn hình 6 — Lỗi sai định dạng</p>
+                    </div>
+                </div>
+
+                <h3>2. Screen Description (field-level spec)</h3>
+
+                <p><strong>Màn hình 1 — Danh sách tài khoản</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table wide-table">
+                        <tr><th>No</th><th>Hạng mục</th><th>Kiểu điều khiển</th><th>Kiểu dữ liệu</th><th>Bắt buộc</th><th>Min</th><th>Max</th><th>Giá trị khởi tạo</th><th>Mô tả</th></tr>
+                        <tr><td>1</td><td>Từ khóa tìm kiếm</td><td>Textbox</td><td>Text</td><td>O</td><td>0</td><td>255</td><td>--</td><td></td></tr>
+                        <tr><td>2</td><td>Nút tìm kiếm</td><td>Button</td><td>Icon</td><td>--</td><td>--</td><td>--</td><td>--</td><td></td></tr>
+                        <tr><td>3</td><td>Nút Thêm mới</td><td>Button</td><td>Icon</td><td>--</td><td>--</td><td>--</td><td>Thêm mới</td><td>Điều hướng sang màn hình tạo mới tài khoản.</td></tr>
+                        <tr><td>4</td><td>Nút Xuất</td><td>Button</td><td>Icon</td><td>--</td><td>--</td><td>--</td><td>Xuất</td><td>Xuất danh sách tài khoản theo dữ liệu đang hiển thị hoặc theo điều kiện lọc hiện tại.</td></tr>
+                        <tr><td>5</td><td>Bảng danh sách tài khoản</td><td>Table</td><td>Text</td><td>--</td><td>--</td><td>--</td><td></td><td></td></tr>
+                        <tr><td>6</td><td>Icon chỉnh sửa</td><td>Button</td><td>Icon</td><td>O</td><td>--</td><td>--</td><td></td><td>Tham chiếu đến màn hình 2</td></tr>
+                    </table>
+                </div>
+
+                <p><strong>Màn hình 2 — Chỉnh sửa tài khoản</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table wide-table">
+                        <tr><th>No</th><th>Hạng mục</th><th>Kiểu điều khiển</th><th>Kiểu dữ liệu</th><th>Bắt buộc</th><th>Min</th><th>Max</th><th>Giá trị khởi tạo</th><th>Mô tả</th></tr>
+                        <tr><td>7</td><td>Họ và tên</td><td>Textbox</td><td>Text</td><td>M</td><td>1</td><td>150</td><td></td><td></td></tr>
+                        <tr><td>8</td><td>Ngày sinh</td><td>Date picker</td><td>Date</td><td>M</td><td>--</td><td>--</td><td></td><td></td></tr>
+                        <tr><td>9</td><td>Giới tính</td><td>Radio button</td><td>Text</td><td>M</td><td>--</td><td>--</td><td>Nam/Nữ</td><td></td></tr>
+                        <tr><td>10</td><td>Username</td><td>Label</td><td>Text</td><td>--</td><td>--</td><td>--</td><td></td><td></td></tr>
+                        <tr><td>11</td><td>Số điện thoại</td><td>Textbox</td><td>Numeric</td><td>M</td><td>10</td><td>10</td><td></td><td></td></tr>
+                        <tr><td>12</td><td>Email</td><td>Textbox</td><td>Email</td><td>M</td><td>1</td><td>250</td><td></td><td>Validate yêu cầu định dạng email</td></tr>
+                        <tr><td>13</td><td>Địa chỉ</td><td>Textbox</td><td>Text</td><td>M</td><td>1</td><td>250</td><td></td><td></td></tr>
+                        <tr><td>14</td><td>Thành phố</td><td>Combo box</td><td>Text</td><td>M</td><td>--</td><td>--</td><td></td><td>Lấy danh sách tỉnh/thành phố của VN</td></tr>
+                        <tr><td>15</td><td>Nút hủy</td><td>Button</td><td>--</td><td>--</td><td>--</td><td>--</td><td>Hủy</td><td></td></tr>
+                        <tr><td>16</td><td>Nút lưu chỉnh sửa</td><td>Button</td><td>--</td><td>--</td><td>--</td><td>--</td><td>Lưu chỉnh sửa</td><td>Tham chiếu logic xử lý</td></tr>
+                    </table>
+                </div>
+
+                <p><strong>Màn hình 3 — Thông báo thành công</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table">
+                        <tr><th>No</th><th>Hạng mục</th><th>Kiểu điều khiển</th><th>Kiểu dữ liệu</th><th>Mô tả</th></tr>
+                        <tr><td>17</td><td>Icon thành công</td><td>Icon</td><td>--</td><td></td></tr>
+                        <tr><td>18</td><td>Nội dung thông báo</td><td>Label</td><td>Text</td><td>Luồng xử lý thành công</td></tr>
+                        <tr><td>19</td><td>Link quay về danh sách</td><td>Link</td><td>--</td><td></td></tr>
+                    </table>
+                </div>
+
+                <div class="case-note">
+                    <strong>Màn hình 4 — Lỗi bắt buộc nhập:</strong> hiển thị thông báo inline khi chưa nhập dữ liệu: <em>“Vui lòng nhập_Tên trường”</em>
+                </div>
+
+                <p><strong>Màn hình 5 — Lỗi thông tin trùng</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table">
+                        <tr><th>No</th><th>Hạng mục</th><th>Kiểu điều khiển</th><th>Bắt buộc</th><th>Mô tả</th></tr>
+                        <tr><td>20</td><td>Pop up thông báo</td><td>Pop up</td><td>--</td><td></td></tr>
+                        <tr><td>21</td><td>Button Quay lại</td><td>Button</td><td>M</td><td>Quay về màn hình 1 danh sách tài khoản</td></tr>
+                    </table>
+                </div>
+
+                <div class="case-note">
+                    <strong>Màn hình 6 — Lỗi sai định dạng:</strong> hiển thị thông báo inline khi dữ liệu sai định dạng ở trường “Số điện thoại” và “Email”: <em>“Tên trường_không đúng định dạng”</em>
+                </div>
+
+                <hr class="case-divider">
+
+                <h3>3. Business Process Flow (BPMN)</h3>
+                <p>End-to-end process across 3 lanes — Admin, CRM FE, CRM BE — from clicking edit to the success confirmation screen.</p>
+                <img src="../images/bpmn-flow.png" alt="BPMN diagram - Edit User process flow" class="case-img-wide">
+
+                <div class="table-scroll">
+                    <table class="case-table">
+                        <tr><th>Bước</th><th>Thao tác</th><th>Thực hiện</th><th>Mô tả</th></tr>
+                        <tr><td>1</td><td>Admin click button chỉnh sửa tài khoản</td><td>Admin</td><td></td></tr>
+                        <tr><td>2</td><td>Gọi API lấy thông tin khách hàng</td><td>CRM FE</td><td>CRM FE gọi API get user detail xuống CRM BE: chuyển sang bước 3</td></tr>
+                        <tr><td>3</td><td>Nhận request và lấy thông tin khách hàng</td><td>CRM BE</td><td>CRM BE nhận request lấy thông tin khách hàng từ CRM FE và lấy hết thông tin trên database: Họ và tên, Ngày sinh, Giới tính, Username, Số điện thoại, Email, Địa chỉ, Thành phố.</td></tr>
+                        <tr><td>4</td><td>Hiển thị màn hình chỉnh sửa tài khoản</td><td>CRM FE</td><td></td></tr>
+                        <tr><td>5</td><td>Nhập liệu chỉnh sửa thông tin + button lưu chỉnh sửa</td><td>Admin</td><td></td></tr>
+                        <tr><td>6</td><td>Validate thông tin</td><td>CRM FE</td><td>Validate các trường bắt buộc + định dạng như mô tả Màn hình 2. Pass → bước 6.2. Không pass → bước 6.1.</td></tr>
+                        <tr><td>6.1</td><td>Hiển thị thông báo lỗi</td><td>CRM FE</td><td>Thiếu trường bắt buộc: “Vui lòng nhập_Tên trường”. Sai định dạng: “Tên trường_không đúng định dạng”. Cho phép quay lại bước 5.</td></tr>
+                        <tr><td>6.2</td><td>Gọi API cập nhật thông tin user</td><td>CRM FE</td><td>CRM FE gọi API edit user xuống CRM BE: chuyển sang bước 7</td></tr>
+                        <tr><td>7</td><td>Nhận thông tin và validate thông tin</td><td>CRM BE</td><td>Validate nghiệp vụ + kiểm tra dữ liệu trên database: username, số điện thoại, email đã được dùng bởi user khác chưa.</td></tr>
+                        <tr><td>8</td><td>Kết quả validate thông tin</td><td>CRM BE</td><td>Không thành công (trùng/không hợp lệ) → bước 8.1. Thành công → bước 9.</td></tr>
+                        <tr><td>8.1</td><td>Hiển thị thông báo dữ liệu trùng</td><td>CRM FE</td><td>“Thông tin này đã có trên hệ thống, vui lòng kiểm tra lại!” + nút quay lại Màn hình 1.</td></tr>
+                        <tr><td>9</td><td>Chỉnh sửa user</td><td>CRM BE</td><td>Cập nhật thông tin user trong database, trả kết quả thành công về CRM FE.</td></tr>
+                        <tr><td>10</td><td>Màn hình thông báo chỉnh sửa user thành công</td><td>CRM FE</td><td>Hiển thị “Chỉnh sửa user thành công”, có link quay về Màn hình 1.</td></tr>
+                    </table>
+                </div>
+
+                <hr class="case-divider">
+
+                <h3>4. API Specification — Get User Detail</h3>
+                <p>Called by CRM FE right after Admin clicks the edit icon, to load the current user data into the edit screen.</p>
+
+                <p><strong>Input</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table">
+                        <tr><th>Field</th><th>M/O</th><th>Type</th><th>Length</th><th>Mô tả</th></tr>
+                        <tr><td>username</td><td>M</td><td>String</td><td>3–20</td><td>Tên đăng nhập</td></tr>
+                        <tr><td>user_id</td><td>M</td><td>String</td><td>3–20</td><td></td></tr>
+                    </table>
+                </div>
+
+                <p><strong>Output</strong></p>
+                <div class="table-scroll">
+                    <table class="case-table">
+                        <tr><th>Field</th><th>M/O</th><th>Type</th><th>Length</th><th>Mô tả</th></tr>
+                        <tr><td>resultCode</td><td>M</td><td>String</td><td>2–20</td><td>Mã kết quả xử lý. VD: "SUCCESS" / "ERROR"</td></tr>
+                        <tr><td>fullName</td><td>M</td><td>String</td><td>1–150</td><td>Họ và tên user</td></tr>
+                        <tr><td>dateOfBirth</td><td>M</td><td>Date</td><td>—</td><td>Ngày sinh của user</td></tr>
+                        <tr><td>gender</td><td>M</td><td>String</td><td>3–10</td><td>Giới tính. Giá trị: "Nam" / "Nữ"</td></tr>
+                        <tr><td>username</td><td>M</td><td>String</td><td>3–20</td><td>Tên đăng nhập, chỉ hiển thị dạng label, không cho chỉnh sửa</td></tr>
+                        <tr><td>phoneNumber</td><td>M</td><td>String</td><td>10</td><td>Số điện thoại của user</td></tr>
+                        <tr><td>email</td><td>M</td><td>String</td><td>1–250</td><td>Email của user</td></tr>
+                        <tr><td>address</td><td>M</td><td>String</td><td>1–250</td><td>Địa chỉ của user</td></tr>
+                        <tr><td>cityName</td><td>M</td><td>String</td><td>1–100</td><td>Tên tỉnh/thành phố</td></tr>
+                        <tr><td>errorCode</td><td>O</td><td>String</td><td>2–50</td><td>Mã lỗi</td></tr>
+                        <tr><td>errorMessage</td><td>O</td><td>String</td><td>1–255</td><td>Nội dung lỗi</td></tr>
+                    </table>
+                </div>
+
+                <hr class="case-divider">
+                <a href="projects.html" class="case-back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
